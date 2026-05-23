@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Family Home</title>
+  <style>
+    html {
+      scroll-behavior: smooth; /* enables smooth scrolling */
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: url('family-portrait.jpg') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 6rem 1rem;
+      position: relative;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.4);
+    }
+    header h1, header p {
+      position: relative;
+      z-index: 1;
+    }
+    nav {
+      background-color: #eee;
+      padding: 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .post {
+      background: white;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    form input, form textarea, form button {
+      margin-bottom: 1rem;
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    form button {
+      background-color: #d8b4e2;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    form button:hover {
+      background-color: #b97ccf;
+    }
+    footer {
+      background-color: #d8b4e2;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 768px) {
+      header {
+        padding: 4rem 1rem;
+      }
+      header h1 {
+        font-size: 1.8rem;
+      }
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
+      }
+      .container {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Our Family Home</h1>
+    <p>Sharing our stories and smiles</p>
+  </header>
+
+  <nav>
+    <a href="#gallery">Photo Gallery</a>
+    <a href="#stories">Stories</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container">
+    <section id="gallery" class="gallery">
+      <h2>Photo Gallery</h2>
+      <img src="family-portrait.jpg" alt="Family Portrait">
+      <img src="vacation.jpg" alt="Vacation Photo">
+    </section>
+
+    <section id="stories">
+      <h2>Family Stories</h2>
+      <div class="post">
+        <h3>Summer Picnic</h3>
+        <p>We had a wonderful time at the park enjoying food, games, and laughter together.</p>
+      </div>
+      <div class="post">
+        <h3>Graduation Day</h3>
+        <p>A proud moment celebrating achievements and looking forward to new adventures.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="text" name="name" placeholder="Your Name">
+        <textarea name="message" rows="4" placeholder="Your Message"></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2026 The Family Home</p>
+  </footer>
+</body>
+</html>
